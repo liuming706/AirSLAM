@@ -110,6 +110,7 @@ The launch files for VO/VIO, map optimization, and relocalization are placed in 
 **3**: Run the launch file:
 
 ```
+export LD_LIBRARY_PATH=/usr/local/cuda/targets/x86_64-linux/lib:/home/ubt/workspace/3rdparty/release/TensorRT-8.6.1.6/targets/x86_64-linux-gnu/lib:$LD_LIBRARY_PATH
 roslaunch air_slam vo_euroc.launch 
 ```
 

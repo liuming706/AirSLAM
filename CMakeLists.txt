@@ -86,10 +86,13 @@ add_library(${PROJECT_NAME}_lib SHARED
   src/timer.cc
   src/debug.cc
 )
-
+link_directories(/home/ubt/workspace/3rdparty/release/TensorRT-8.6.1.6/targets/x86_64-linux-gnu/lib)
 target_link_libraries(${PROJECT_NAME}_lib
-  nvinfer
-  nvonnxparser
+#  nvinfer
+#  nvonnxparser
+  /home/ubt/workspace/3rdparty/release/TensorRT-8.6.1.6/targets/x86_64-linux-gnu/lib/libnvinfer.so
+  /home/ubt/workspace/3rdparty/release/TensorRT-8.6.1.6/targets/x86_64-linux-gnu/lib/stubs/libnvonnxparser.so
+#  /home/ubt/workspace/3rdparty/release/TensorRT-8.6.1.6/targets/x86_64-linux-gnu/lib/libnvinfer_plugin.so.8
   ${OpenCV_LIBRARIES}
   ${CUDA_LIBRARIES}
   ${Boost_LIBRARIES}
